@@ -2,10 +2,6 @@ public class Journal
 {
     public List<Entry> _entries = new List<Entry>();
 
-    public Journal(List<Entry> entryList)
-    {
-        _entries = entryList;
-    }
     public void AddEntry()
     {
         PromptGenerator promptGenerator = new PromptGenerator();
@@ -29,7 +25,8 @@ public class Journal
             Entry entryFromFile = new Entry(parts[1][1..21], parts[2][1..], parts[3][1..]);
             _entries.Add(entryFromFile);
         }
-        Journal journal = new Journal(_entries);
+        Journal journal = new Journal();
+        journal._entries = _entries;
         return journal;
     }
     public void SaveToFile()
