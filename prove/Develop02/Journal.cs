@@ -26,7 +26,7 @@ public class Journal
         foreach (string entry in loadedFile)
         {
             string[] parts = entry.Split(";");
-            Entry entryFromFile = new Entry(parts[1].Substring(1, 21), parts[2].Substring(1), parts[3].Substring(1));
+            Entry entryFromFile = new Entry(parts[1][1..21], parts[2][1..], parts[3][1..]);
             _entries.Add(entryFromFile);
         }
         Journal journal = new Journal(_entries);

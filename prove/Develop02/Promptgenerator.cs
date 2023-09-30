@@ -1,6 +1,6 @@
 public class PromptGenerator
 {
-    private List<string> _prompts = new List<string>();
+    public List<string> _prompts = new List<string>();
     public PromptGenerator()
     {
         _prompts.Add("Who was the most interesting person I interacted with today?");
