@@ -21,7 +21,7 @@ public class Journal
         _entries.Clear();
         foreach (string entry in loadedFile)
         {
-            string[] parts = entry.Split(";");
+            string[] parts = entry.Split("~");
             Entry entryFromFile = new Entry(parts[1][1..21], parts[2][1..], parts[3][1..]);
             _entries.Add(entryFromFile);
         }
@@ -37,7 +37,7 @@ public class Journal
         {
             foreach (Entry entry in _entries)
             {
-                outputFile.WriteLine($"Date; {entry._date} - Prompt; {entry._prompt}; {entry._entryText}");
+                outputFile.WriteLine($"Date~ {entry._date} - Prompt~ {entry._prompt}~ {entry._entryText}");
             }
         }
     }
