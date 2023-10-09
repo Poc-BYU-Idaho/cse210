@@ -4,7 +4,6 @@ class Program
 {
     static void Main(string[] args)
     {
-        List<Entry> _entries = new List<Entry>();
         Journal selectedJournal = new Journal();
         int x = 1;
         do
