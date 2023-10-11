@@ -6,7 +6,7 @@ class Program
     {
         Journal selectedJournal = new Journal();
         int x = 1;
-        do
+        while (x == 1)
         {
             Console.WriteLine("Welcome to the Journal Program!\nPlease select one of the following choices\n1. Write\n2. Display\n3. Load\n4. Save\n5. Quit\nWhat would you like to do?");
             string userChoice = Console.ReadLine();
@@ -28,9 +28,8 @@ class Program
             }
             else if (userChoice == "5")
             {
-                break;
+                x = 0;
             }
         }
-        while (x == 1);
     }
 }
