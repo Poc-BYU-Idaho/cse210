@@ -33,38 +33,38 @@ public class Word
         {
             return _wordString;
         }
-        else if (_wordString.Contains(",") || _wordString.Contains(".") || _wordString.Contains(";") || _wordString.Contains("'") || _wordString.Contains("\"") || _wordString.Contains("!") || _wordString.Contains("?"))
+        else if (_wordString.EndsWith(",") || _wordString.EndsWith(".") || _wordString.EndsWith(";") || _wordString.EndsWith("'") || _wordString.EndsWith("\"") || _wordString.EndsWith("!") || _wordString.EndsWith("?"))
         {
             StringBuilder stringBuilder = new StringBuilder();
             for (int i = 0; i < _wordString.Length - 1; i ++)
             {
                 stringBuilder.Append("_");
             }
-                if (_wordString.Contains(","))
+                if (_wordString.EndsWith(","))
                 {
                     stringBuilder.Append(",");
                 }
-                else if (_wordString.Contains("."))
+                else if (_wordString.EndsWith("."))
                 {
                     stringBuilder.Append(".");
                 }
-                else if (_wordString.Contains(";"))
+                else if (_wordString.EndsWith(";"))
                 {
                     stringBuilder.Append(";");
                 }
-                else if (_wordString.Contains("'"))
+                else if (_wordString.EndsWith("'"))
                 {
                     stringBuilder.Append("'");
                 }
-                else if (_wordString.Contains("\""))
+                else if (_wordString.EndsWith("\""))
                 {
                     stringBuilder.Append("\"");
                 }
-                else if (_wordString.Contains("!"))
+                else if (_wordString.EndsWith("!"))
                 {
                     stringBuilder.Append("!");
                 }
-                else if (_wordString.Contains("?"))
+                else if (_wordString.EndsWith("?"))
                 {
                     stringBuilder.Append("?");
                 }         
