@@ -5,17 +5,20 @@ VipElevator vipElevator = new VipElevator(1, 31, "rightpassword");
 Console.WriteLine(elevator1.DisplayFloor());
 Console.WriteLine(elevator2.DisplayFloor());
 Console.WriteLine(vipElevator.DisplayFloor());
+Console.WriteLine();
 
 
 elevator1.ChangeFloor(5);
 elevator2.ChangeFloor(50);
 elevator2.ChangeFloor(-10);
 vipElevator.ChangeFloor(8, "wrongpassword");
+Console.WriteLine();
 
 
 Console.WriteLine(elevator1.DisplayFloor());
 Console.WriteLine(elevator2.DisplayFloor());
 Console.WriteLine(vipElevator.DisplayFloor());
+Console.WriteLine();
 
 
 vipElevator.ChangeFloor(8, "rightpassword");

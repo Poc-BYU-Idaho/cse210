@@ -1,6 +1,6 @@
 public class Elevator
 {
-    private int _currentFloor = 0;
+    private int _currentFloor = 1;
     private int _bottomFloor;
     private int _topFloor;
     private bool _doorsOpen = false;
