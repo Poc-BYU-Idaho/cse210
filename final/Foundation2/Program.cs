@@ -4,26 +4,9 @@ class Program
 {
     static void Main(string[] args)
     {
-        Address usaddress = new Address("test street name 1", "Rexburg", "Idaho", "USA");
-        Address nonUsaddress = new Address("test street name 2", "Quebec City", "Quebec", "Canada");
+        Order usOrder = new Order(new List<Product>(){new Product("A product", "12345", 5, 2), new Product("Another product", "54321", 100, 1)}, new Customer("George", new Address("test street name 1", "Rexburg", "Idaho", "USA")));
 
-        Customer usCustomer = new Customer("George", usaddress);
-        Customer nonUsCustomer = new Customer("Jimbo", nonUsaddress);
-
-        List<Product> usCustomerProducts = new List<Product>()
-        {
-            new Product("A product", "12345", 5, 2),
-            new Product("Another product", "54321", 100, 1)
-        };
-        List<Product> nonUsCustomerProducts = new List<Product>()
-        {
-            new Product("A product", "12345", 5, 2),
-            new Product("Another product", "54321", 100, 1),
-            new Product("A third product", "99999", 20, 5)
-        };
-
-        Order usOrder = new Order(usCustomerProducts, usCustomer);
-        Order nonUsOrder = new Order(nonUsCustomerProducts, nonUsCustomer);
+        Order nonUsOrder = new Order(new List<Product>(){new Product("A product", "12345", 5, 2), new Product("Another product", "54321", 100, 1), new Product("A third product", "99999", 20, 5)}, new Customer("Jimbo", new Address("test street name 2", "Quebec City", "Quebec", "Canada")));
 
         Console.WriteLine(usOrder.GetPackingLabel());
         Console.WriteLine($"Shipping Label: {usOrder.GetShippingLabel()}");
