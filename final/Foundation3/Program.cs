@@ -14,8 +14,11 @@ class Program
         foreach (Event eventObject in events)
         {
                 eventObject.GetDetails();
+                Console.WriteLine();
                 eventObject.GetFullDetails();
+                Console.WriteLine();
                 eventObject.GetShortDetails();
+                Console.WriteLine("\n\n");
         }
     }
 }
