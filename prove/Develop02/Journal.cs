@@ -15,7 +15,7 @@ public class Journal
     }
     public Journal LoadFromFile()
     {
-        Console.WriteLine("What file would you like to load a journal from ?");
+        Console.WriteLine("What file would you like to load a journal from?");
         string fileName = Console.ReadLine();
         string[] loadedFile = System.IO.File.ReadAllLines(fileName);
         _entries.Clear();
